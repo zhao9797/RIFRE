@@ -24,7 +24,8 @@ class Config(object):
         self.seed = 2020
 
         self.pool_type = 'avg'
-
+        if not os.path.exists('checkpoint'):
+            os.mkdir('checkpoint')
         self.semeval_ckpt = 'checkpoint/semeval.pth.tar'
         self.webnlg_ckpt = 'checkpoint/webnlg.pth.tar'
         self.nyt_ckpt = 'checkpoint/nyt.pth.tar'
