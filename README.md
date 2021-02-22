@@ -16,3 +16,5 @@ Pytorch implementation for codes in Representation Iterative Fusion Based on Het
 ```
 python train.py
 ```
+
+## Citation
