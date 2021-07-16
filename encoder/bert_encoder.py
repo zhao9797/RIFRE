@@ -10,5 +10,5 @@ class BERTEncoder(nn.Module):
         logging.info('Loading BERT pre-trained checkpoint.')
         self.bert = BertModel.from_pretrained(pretrain_path)
     def forward(self, token, att_mask):
-        x, _ = self.bert(token, attention_mask=att_mask)
-        return x
+        x = self.bert(token, attention_mask=att_mask)
+        return x[0]
