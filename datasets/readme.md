@@ -12,4 +12,4 @@ The processed data are placed in *data/nyt* and *data/webnlg* respectively.
 
 #### BERT Weights
 
-* Download *bert-base-uncased* and *bert-base-cased* into the *bert/* directory [google drive](https://drive.google.com/drive/folders/1BGNdXrxy6W_sWaI9DasykTj36sMOoOGK).
+* Download *bert-base-uncased* and *bert-base-cased* into the *bert/* directory [[google drive]](https://drive.google.com/drive/folders/1BGNdXrxy6W_sWaI9DasykTj36sMOoOGK).
