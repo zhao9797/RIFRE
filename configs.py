@@ -11,6 +11,9 @@ class Config(object):
         self.max_length = 100
         self.epoch = 50
         self.lr = 1e-1
+        
+        self.patience = 9 #early stopping patience level
+        self.training_criteria = 'micro_f1' #or 'macro_f1'
 
         self.gat_layers = 2
         self.hidden_size = 768
