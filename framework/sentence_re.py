@@ -117,13 +117,17 @@ class Sentence_RE(nn.Module):
             print("acc: %.4f" % result['acc'])
             print("macro_f1: %.4f" % (result['macro_f1']))
             print("micro_f1: %.4f" % (result['micro_f1']))
-            if result['micro_f1'] > best_f1:
+            
+            #set training criteria in config, micro_f1 or macro_f1
+            if result[self.model.config.training_criteria] > best_f1:
                 print("Best ckpt and saved.")
                 torch.save({'state_dict': self.model.state_dict()}, self.ckpt)
-                best_f1 = result['micro_f1']
+                best_f1 = result[self.model.config.training_criteria]
+                item=0 #reset the early stopping counter
             else:
                 item += 1
-                if item > 9:
+                #set early stopping patience level in config
+                if item > self.model.config.patience:
                     print('Epoch %05d: early stopping' % (epoch + 1))
                     break
         print("Best f1 on val set: %f" % (best_f1))
