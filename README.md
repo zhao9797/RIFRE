@@ -15,6 +15,19 @@ Pytorch implementation for codes in Representation Iterative Fusion Based on Het
 ### Clone and load BERT pretrained models
 ```
 git clone https://github.com/zhao9797/RIFRE.git
+git clone https://github.com/zhao9797/RIFRE.git
+cd RIFRE/datasets
+mkdir bert
+cd bert
+sudo apt-get install git-lfs
+git clone https://huggingface.co/bert-base-cased
+git clone https://huggingface.co/bert-base-uncased
+cd bert-base-cased
+git lfs pull
+cd ..
+cd bert-base-uncased
+git lfs pull
+
 ```
 
 ### Run the Code
