@@ -12,6 +12,11 @@ Pytorch implementation for codes in Representation Iterative Fusion Based on Het
 * transformers
 * numpy
 
+### Clone and load BERT pretrained models
+```
+git clone https://github.com/zhao9797/RIFRE.git
+```
+
 ### Run the Code
 ```
 python train.py
