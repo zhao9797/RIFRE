@@ -150,7 +150,7 @@ class Sentence_RE(nn.Module):
             args = data[1:]
             logits, _ = self.model(sent_label, *args)
             # loss
-            loss, acc = self.acc_loss(logits, sent_label, 19)
+            loss, acc = self.acc_loss(logits, sent_label, self.model.config.semeval_class)
             # Log
             avg_sent_loss.update(loss.item(), 1)
             avg_sent_acc.update(acc, 1)
